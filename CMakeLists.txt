@@ -16,9 +16,14 @@ INCLUDE_DIRECTORIES (
     include)
 
 #Source Files and Headers
-SET ( SRC_FILES src/hello_window.cpp
-                libs/glad/src/glad.c)
-SET ( HEADER_FILES libs/glad/include)
+SET ( SRC_FILES "src/hello_window.cpp"
+                "src/callbacks.cpp"
+                "libs/glad/src/glad.c"
+                "src/hello_triangle.cpp" )
+SET ( HEADER_FILES "libs/glad/include/glad/glad.h"
+                "include/LearnOpenGL/hello_window.h" 
+                "include/LearnOpenGL/hello_triangle.h"
+                "include/LearnOpenGL/callbacks.h" )
 
 #build library
 ADD_LIBRARY (${PROJECT_NAME} ${SRC_FILES} ${HEADER_FILES})

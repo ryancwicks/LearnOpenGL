@@ -8,10 +8,10 @@
  * @copyright Copyright (c) 2019
  * 
  */
-#include "LearnOpenGL/hello_window.h"
+#include "LearnOpenGL/hello_triangle.h"
 
 int main ( int argc, char * argv[]){
 
-    return helloWindow();
+    return helloTriangle();
 
 }

@@ -1,11 +1,10 @@
 #include "LearnOpenGL/hello_window.h"
+#include "LearnOpenGL/callbacks.h"
 
 #include <iostream>
 #include <glad/glad.h>
 #include <GLFW/glfw3.h>
 
-void framebuffer_size_callback(GLFWwindow* window, int width, int height);
-void processInput(GLFWwindow *window);
 
 int helloWindow(){
     //Initialize GLFW
@@ -55,15 +54,4 @@ int helloWindow(){
     glfwTerminate();
     return 0;
 
-}
-
-void framebuffer_size_callback(GLFWwindow* window, int width, int height)
-{
-    glViewport(0, 0, width, height);
-}
-
-void processInput(GLFWwindow *window)
-{
-    if(glfwGetKey(window, GLFW_KEY_ESCAPE) == GLFW_PRESS)
-        glfwSetWindowShouldClose(window, true);
 }
