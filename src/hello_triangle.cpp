@@ -1,7 +1,7 @@
 #include "LearnOpenGL/hello_triangle.h"
 
 #include "LearnOpenGL/callbacks.h"
-#include "LearnOpenGL/shader_path_tool.h"
+#include "LearnOpenGL/path_tool.h"
 #include "LearnOpenGL/shader.h"
 
 #include <iostream>

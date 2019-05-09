@@ -1,0 +1,15 @@
+#ifndef PATH_TOOL_H
+#define PATH_TOOL_H
+
+#include <string>
+
+std::string shaderPath (){ 
+    return "${SHADER_PATH}"; 
+}
+
+std::string texturePath (){ 
+    return "${TEXTURE_PATH}"; 
+}
+
+
+#endif
