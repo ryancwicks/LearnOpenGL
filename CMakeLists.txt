@@ -16,7 +16,7 @@ INCLUDE_DIRECTORIES (
     include)
 
 SET (SHADER_PATH "${PROJECT_SOURCE_DIR}/shaders/")
-CONFIGURE_FILE ("include/LearnOpenGL/shader_path_tool.h.in" "include/LearnOpenGL/shader_path_tool.h")
+CONFIGURE_FILE ("${PROJECT_SOURCE_DIR}/include/LearnOpenGL/shader_path_tool.h.in" "${PROJECT_SOURCE_DIR}/include/LearnOpenGL/shader_path_tool.h")
 
 #Source Files and Headers
 SET ( SRC_FILES "src/hello_window.cpp"

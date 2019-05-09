@@ -3,6 +3,8 @@
 
 #include <string>
 
-std::string shaderPath () { return ${SHADER_PATH} };
+std::string shaderPath (){ 
+    return "${SHADER_PATH}"; 
+}
 
 #endif

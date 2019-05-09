@@ -2,6 +2,7 @@
 
 #include "LearnOpenGL/callbacks.h"
 #include "LearnOpenGL/shader_path_tool.h"
+#include "LearnOpenGL/shader.h"
 
 #include <iostream>
 #include <glad/glad.h>
@@ -38,6 +39,7 @@ int helloTriangle(){
         return -1;
     }  
 
+    /**
     //Build and compile shader programs
     int vertexShader = glCreateShader(GL_VERTEX_SHADER);
     glShaderSource(vertexShader, 1, &vertexShaderSource, NULL);
@@ -75,6 +77,9 @@ int helloTriangle(){
     }
     glDeleteShader(vertexShader);
     glDeleteShader(fragmentShader);
+    */
+
+   Shader shader (shaderPath() + "hello_triangle.vs", shaderPath() + "hello_triangle.fs");
 
     // set up vertex data (and buffer(s)) and configure vertex attributes
     // ------------------------------------------------------------------
@@ -114,7 +119,7 @@ int helloTriangle(){
         glClear(GL_COLOR_BUFFER_BIT);
 
         //Draw the first triangle
-        glUseProgram (shaderProgram);
+        shader.use();
         glBindVertexArray(VAO); //with only one, there is no need to rebind every time. May as well.
         glDrawArrays (GL_TRIANGLES, 0, 3);
         //glBindVertexArray(0); //not needed in this case.
