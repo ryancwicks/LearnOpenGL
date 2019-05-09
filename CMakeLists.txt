@@ -15,15 +15,21 @@ INCLUDE_DIRECTORIES (
     libs/glad/include
     include)
 
+SET (SHADER_PATH "${PROJECT_SOURCE_DIR}/shaders/")
+CONFIGURE_FILE ("include/LearnOpenGL/shader_path_tool.h.in" "include/LearnOpenGL/shader_path_tool.h")
+
 #Source Files and Headers
 SET ( SRC_FILES "src/hello_window.cpp"
                 "src/callbacks.cpp"
                 "libs/glad/src/glad.c"
-                "src/hello_triangle.cpp" )
+                "src/hello_triangle.cpp"
+                "src/shader.cpp" )
 SET ( HEADER_FILES "libs/glad/include/glad/glad.h"
                 "include/LearnOpenGL/hello_window.h" 
                 "include/LearnOpenGL/hello_triangle.h"
-                "include/LearnOpenGL/callbacks.h" )
+                "include/LearnOpenGL/callbacks.h"
+                "include/LearnOpenGL/shader.h"
+                "include/LearnOpenGL/shader_path_tool.h" )
 
 #build library
 ADD_LIBRARY (${PROJECT_NAME} ${SRC_FILES} ${HEADER_FILES})

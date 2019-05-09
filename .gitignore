@@ -30,3 +30,6 @@
 *.exe
 *.out
 *.app
+
+#ignore generated files.
+include/LearnOpenGL/shader_path_tool.h
